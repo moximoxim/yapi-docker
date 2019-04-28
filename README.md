@@ -1,14 +1,14 @@
 # yapi-docker
 
-- env：
-  - Hardware requirements：`1 GB RAM minimum`
-  - work path：`mkdir -p /opt/git-yapidata`
+- 环境：
+  - 硬件要求：`1 GB RAM minimum`
+  - 工作路径：`mkdir -p /opt/git-yapidata`
   - ip:xxx.xxx.xxx.xxx
-- clone：
-  - `cd /opt/git-data && git clone https://github.com//yapi-docker.git`
-- permission：
+- 克隆：
+  - `cd /opt/git-yapidata && git clone https://github.com/xingyalee/yapi-docker.git`
+- 修改权限：
   - `chmod -R 777 /opt/git-yapidata`
-- run command：
+- 运行指令：
   - `docker-compose up -d`
-- open chrome：
+- chrome浏览网页：
   - `http://ip:3000`
