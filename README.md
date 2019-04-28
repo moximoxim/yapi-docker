@@ -12,4 +12,4 @@
   - `docker-compose up -d`
 - chrome浏览网页：
   - `http://ip:3000`
-  - 账号：tm@golf.com 密码：ymfe.org
+  - 账号：tm@golf.com（可在配置文件修改‘adminAccount’字段） 密码：ymfe.org
