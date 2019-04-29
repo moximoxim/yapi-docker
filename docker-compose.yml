@@ -2,10 +2,10 @@ version: "3.3"
 services:
   mongodb:
     image: mongo:3.5
+    ports:
+      - 27017:27017
     volumes:
-      - type: bind
-        source: ./data/db
-        target: /data/db
+      - ./data/db:/data/db
   web:
     image: branchzero/yapi:latest
     command: /bin/bash -c "[ ! -e /home/yapi/log/init.lock ] && npm run install-server && touch /home/yapi/log/init.lock; npm run start"
@@ -14,9 +14,5 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - type: bind
-        source: ./config.json
-        target: /home/yapi/config.json
-      - type: bind
-        source: ./data/yapi
-        target: /home/yapi/log
+      - ./config.json:/home/yapi/config.json
+      - ./data/yapi:/home/yapi/log
